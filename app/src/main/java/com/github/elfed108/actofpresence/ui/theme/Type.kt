@@ -26,52 +26,62 @@ private val Alegreya = FontFamily(
 
 val ActOfPresenceTypography = Typography(
     h4 = TextStyle(
-        fontFamily = AlegreyaSans,
-        fontWeight = FontWeight.W600,
-        fontSize = 30.sp
+        fontFamily = Alegreya,
+       // fontWeight = FontWeight.W700,
+        fontSize = 30.sp,
+        color = TextWhite
     ),
     h5 = TextStyle(
         fontFamily = AlegreyaSans,
         fontWeight = FontWeight.W600,
-        fontSize = 24.sp
+        fontSize = 24.sp,
+        color = TextWhite
     ),
     h6 = TextStyle(
         fontFamily = AlegreyaSans,
         fontWeight = FontWeight.W600,
-        fontSize = 20.sp
+        fontSize = 20.sp,
+        color = TextWhite
     ),
     subtitle1 = TextStyle(
         fontFamily = AlegreyaSans,
         fontWeight = FontWeight.W600,
-        fontSize = 16.sp
+        fontSize = 16.sp,
+        color = WhiteDark800
     ),
     subtitle2 = TextStyle(
         fontFamily = AlegreyaSans,
         fontWeight = FontWeight.W500,
-        fontSize = 14.sp
+        fontSize = 14.sp,
+        color = WhiteDark800
     ),
     body1 = TextStyle(
         fontFamily = Alegreya,
         fontWeight = FontWeight.Normal,
-        fontSize = 16.sp
+        fontSize = 16.sp,
+        color = WhiteDark800
     ),
     body2 = TextStyle(
         fontFamily = AlegreyaSans,
-        fontSize = 14.sp
+        fontSize = 14.sp,
+        color = WhiteDark800
     ),
     button = TextStyle(
         fontFamily = AlegreyaSans,
         fontWeight = FontWeight.W500,
-        fontSize = 14.sp
+        fontSize = 14.sp,
+        color = WhiteDark800
     ),
     caption = TextStyle(
         fontFamily = AlegreyaSans,
         fontWeight = FontWeight.Normal,
-        fontSize = 12.sp
+        fontSize = 12.sp,
+        color = WhiteDark800
     ),
     overline = TextStyle(
         fontFamily = AlegreyaSans,
         fontWeight = FontWeight.W500,
-        fontSize = 12.sp
+        fontSize = 12.sp,
+        color = WhiteDark800
     )
 )
