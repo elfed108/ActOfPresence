@@ -7,6 +7,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 
 import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.style.BaselineShift
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.TextUnit
 import com.github.elfed108.actofpresence.R
 
 // Set of Material typography styles to start with
@@ -27,61 +30,55 @@ private val Alegreya = FontFamily(
 val ActOfPresenceTypography = Typography(
     h4 = TextStyle(
         fontFamily = Alegreya,
-       // fontWeight = FontWeight.W700,
-        fontSize = 30.sp,
-        color = TextWhite
+        fontWeight = FontWeight.W700,
+        fontSize = 34.sp,
     ),
     h5 = TextStyle(
         fontFamily = AlegreyaSans,
         fontWeight = FontWeight.W600,
-        fontSize = 24.sp,
-        color = TextWhite
+        fontSize = 28.sp,
     ),
     h6 = TextStyle(
         fontFamily = AlegreyaSans,
         fontWeight = FontWeight.W600,
-        fontSize = 20.sp,
-        color = TextWhite
+        fontSize = 24.sp,
     ),
     subtitle1 = TextStyle(
         fontFamily = AlegreyaSans,
         fontWeight = FontWeight.W600,
         fontSize = 16.sp,
-        color = WhiteDark800
     ),
     subtitle2 = TextStyle(
         fontFamily = AlegreyaSans,
         fontWeight = FontWeight.W500,
-        fontSize = 14.sp,
-        color = WhiteDark800
+        fontSize = 13.sp,
     ),
     body1 = TextStyle(
         fontFamily = Alegreya,
         fontWeight = FontWeight.Normal,
-        fontSize = 16.sp,
-        color = WhiteDark800
+        fontSize = 20.sp,
+        lineHeight = 15.sp
     ),
     body2 = TextStyle(
         fontFamily = AlegreyaSans,
         fontSize = 14.sp,
-        color = WhiteDark800
     ),
     button = TextStyle(
         fontFamily = AlegreyaSans,
         fontWeight = FontWeight.W500,
         fontSize = 14.sp,
-        color = WhiteDark800
+        baselineShift = BaselineShift.None,
+        textAlign = TextAlign.Justify
     ),
     caption = TextStyle(
         fontFamily = AlegreyaSans,
         fontWeight = FontWeight.Normal,
         fontSize = 12.sp,
-        color = WhiteDark800
     ),
     overline = TextStyle(
         fontFamily = AlegreyaSans,
         fontWeight = FontWeight.W500,
         fontSize = 12.sp,
-        color = WhiteDark800
+        // color = WhiteDark800
     )
 )

@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">ActOfPresence</string>
+    <string name="hello_name">Добрый день, %1$s!</string>
+    <string name="scan">scan</string>
+    <string name="non_action">non action</string>
+    <string name="cultivation">cultivation</string>
+    <string name="title_activity_home_screen">HomeScreen</string>
+    <string name="how_are_you_feel">Как вы сегодня себя чувствуете?</string>
+    <string name="meditate">Meditate</string>
+    <string name="timer">Timer</string>
+    <string name="home">Home</string>
+    <string name="sustainability">Устойчивость</string>
+    <string name="clarity">Ясность</string>
+    <string name="calm">Покой</string>
+    <string name="heartiness">Сердченость</string>
+    <string name="metta">Метта</string>
+
+    <string name="path_title_1">Путь Ясности</string>
+    <string name="path_title_2">Путь Сосредоточения</string>
+    <string name="path_title_3">Путь Сердечности</string>
+
+    <string name="path_description_1">7-дневное приключение</string>
+    <string name="path_description_2">21-дневное приключение</string>
+    <string name="path_description_3">30-дневное приключение</string>
+    <string name="watch">смотреть</string>
+    <string name="title_activity_home">Home</string>
 </resources>
