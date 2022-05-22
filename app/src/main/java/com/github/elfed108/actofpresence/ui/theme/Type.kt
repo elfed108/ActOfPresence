@@ -31,7 +31,7 @@ val ActOfPresenceTypography = Typography(
     h4 = TextStyle(
         fontFamily = Alegreya,
         fontWeight = FontWeight.W700,
-        fontSize = 34.sp,
+        fontSize = 36.sp,
     ),
     h5 = TextStyle(
         fontFamily = AlegreyaSans,
@@ -51,17 +51,19 @@ val ActOfPresenceTypography = Typography(
     subtitle2 = TextStyle(
         fontFamily = AlegreyaSans,
         fontWeight = FontWeight.W500,
-        fontSize = 13.sp,
+        fontSize = 16.sp,
     ),
     body1 = TextStyle(
         fontFamily = Alegreya,
         fontWeight = FontWeight.Normal,
-        fontSize = 20.sp,
+        fontSize = 24.sp,
         lineHeight = 15.sp
     ),
     body2 = TextStyle(
-        fontFamily = AlegreyaSans,
-        fontSize = 14.sp,
+        fontFamily = Alegreya,
+        fontWeight = FontWeight.Normal,
+        fontSize = 18.sp,
+        lineHeight = 15.sp
     ),
     button = TextStyle(
         fontFamily = AlegreyaSans,
@@ -79,6 +81,5 @@ val ActOfPresenceTypography = Typography(
         fontFamily = AlegreyaSans,
         fontWeight = FontWeight.W500,
         fontSize = 12.sp,
-        // color = WhiteDark800
     )
 )

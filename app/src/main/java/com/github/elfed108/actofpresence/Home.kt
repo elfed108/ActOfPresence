@@ -48,9 +48,10 @@ fun HomeScreen() {
         Scaffold(
             topBar = { AppBar() },
             bottomBar = { Navigation() },
-        ) {
+        ) { padding ->
             Column(
                 modifier = Modifier
+                    .padding(padding)
                     .fillMaxWidth()
             ) {
                 Greeting(name = "Виктор")
@@ -82,7 +83,7 @@ fun Greeting(name: String) {
     Column(
         horizontalAlignment = Alignment.Start,
         verticalArrangement = Arrangement.Top,
-        modifier = Modifier.padding(16.dp)
+        modifier = Modifier.padding(bottom = 16.dp, start = 16.dp, end = 16.dp)
     ) {
         Text(
             text = stringResource(id = R.string.hello_name, name),
@@ -112,7 +113,7 @@ fun TypesMeditationRow() {
 fun TypeMeditation(@DrawableRes icon: Int, @StringRes text: Int) {
     Column(
         horizontalAlignment = CenterHorizontally,
-        modifier = Modifier.size(width = 80.dp, height = 90.dp)
+        modifier = Modifier.size(width = 90.dp, height = 110.dp)
     ) {
         Surface(
             shape = MaterialTheme.shapes.small,
@@ -124,7 +125,7 @@ fun TypeMeditation(@DrawableRes icon: Int, @StringRes text: Int) {
                 contentDescription = null,
                 tint = GreenDark800,
                 modifier = Modifier
-                    .size(70.dp)
+                    .size(90.dp)
                     .padding(8.dp)
             )
         }
@@ -188,11 +189,10 @@ fun MeditationPath(
                 )
                 Text(
                     text = stringResource(id = description),
-                    style = MaterialTheme.typography.body1,
+                    style = MaterialTheme.typography.body2,
                     color = MaterialTheme.colors.background,
                     maxLines = 3
                 )
-
                 val mainButtonColor = ButtonDefaults.buttonColors(
                     backgroundColor = MaterialTheme.colors.background,
                     contentColor = MaterialTheme.colors.onBackground
@@ -245,7 +245,6 @@ fun Navigation() {
     val unSelectedColor = Grey600
     BottomNavigation(
         backgroundColor = MaterialTheme.colors.background,
-        modifier = Modifier.padding(top = 8.dp),
         elevation = 10.dp
     ) {
         BottomNavigationItem(selected = selectedIndex == 0,
@@ -268,7 +267,6 @@ fun Navigation() {
                     painter = painterResource(id = R.drawable.ic_timer),
                     contentDescription = stringResource(R.string.timer),
                     modifier = Modifier.size(42.dp)
-
                 )
             })
         BottomNavigationItem(selected = selectedIndex == 2,
@@ -284,7 +282,6 @@ fun Navigation() {
             })
     }
 }
-
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
