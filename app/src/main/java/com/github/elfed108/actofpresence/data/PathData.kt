@@ -20,7 +20,12 @@ val calmPathList = listOf(
         R.drawable.group,
         R.string.path_title_1,
         R.string.path_description_3
-    )
+    ),
+    DrawableStringTriple(
+        R.drawable.group,
+        R.string.path_title_1,
+        R.string.path_description_3
+    ),
 )
 
 val clarityPathList = listOf(
@@ -38,7 +43,12 @@ val clarityPathList = listOf(
         R.drawable.group2,
         R.string.path_title_2,
         R.string.path_description_3
-    )
+    ),
+    DrawableStringTriple(
+        R.drawable.group2,
+        R.string.path_title_2,
+        R.string.path_description_3
+    ),
 )
 
 val sustainabilityPathList = listOf(
@@ -56,7 +66,12 @@ val sustainabilityPathList = listOf(
         R.drawable.group,
         R.string.path_title_3,
         R.string.path_description_3
-    )
+    ),
+    DrawableStringTriple(
+        R.drawable.group,
+        R.string.path_title_3,
+        R.string.path_description_3
+    ),
 )
 
 val meditationTypeList = listOf(

@@ -20,7 +20,7 @@ import com.github.elfed108.actofpresence.ui.theme.WhiteDark800
 @Composable
 fun LogoIcons(
     size: Dp = 24.dp,
-    tint: Color = WhiteDark800
+    tint: Color = MaterialTheme.colors.primary
 ) {
     Icon(
         painter = painterResource(id = R.drawable.ic_scan),

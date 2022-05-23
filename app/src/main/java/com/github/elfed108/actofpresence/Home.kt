@@ -1,5 +1,6 @@
 package com.github.elfed108.actofpresence
 
+import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -29,8 +30,6 @@ import com.github.elfed108.actofpresence.data.calmPathList
 import com.github.elfed108.actofpresence.data.meditationTypeList
 import com.github.elfed108.actofpresence.ui.LogoIcons
 import com.github.elfed108.actofpresence.ui.theme.ActOfPresenceTheme
-import com.github.elfed108.actofpresence.ui.theme.GreenDark800
-import com.github.elfed108.actofpresence.ui.theme.Grey600
 import com.github.elfed108.actofpresence.ui.theme.TextWhite
 
 class Home : ComponentActivity() {
@@ -57,6 +56,7 @@ fun HomeScreen() {
                 Greeting(name = "Виктор")
                 TypesMeditationRow()
                 PathsMeditationColumn()
+
             }
         }
     }
@@ -71,7 +71,7 @@ fun AppBar() {
                     .fillMaxWidth()
                     .wrapContentWidth(CenterHorizontally)
             ) {
-                LogoIcons(size = 36.dp, tint = TextWhite)
+                LogoIcons(size = 36.dp)
             }
         },
         backgroundColor = MaterialTheme.colors.background,
@@ -101,7 +101,7 @@ fun TypesMeditationRow() {
     LazyRow(
         horizontalArrangement = Arrangement.spacedBy(16.dp),
         contentPadding = PaddingValues(horizontal = 16.dp),
-        modifier = Modifier.padding(4.dp)
+        modifier = Modifier.padding(4.dp),
     ) {
         items(meditationTypeList) { item ->
             TypeMeditation(item.drawable, item.text)
@@ -118,15 +118,15 @@ fun TypeMeditation(@DrawableRes icon: Int, @StringRes text: Int) {
         Surface(
             shape = MaterialTheme.shapes.small,
             modifier = Modifier.clip(RoundedCornerShape(22.dp)),
-            color = TextWhite
+            color = MaterialTheme.colors.secondary
         ) {
             Icon(
                 painter = painterResource(id = icon),
                 contentDescription = null,
-                tint = GreenDark800,
+                tint = MaterialTheme.colors.background,
                 modifier = Modifier
-                    .size(90.dp)
-                    .padding(8.dp)
+                    .size(80.dp)
+                    .padding(16.dp)
             )
         }
         Text(
@@ -164,13 +164,14 @@ fun MeditationPath(
 ) {
     Card(
         shape = MaterialTheme.shapes.medium,
-        backgroundColor = TextWhite,
+        backgroundColor = MaterialTheme.colors.primaryVariant,
         modifier = Modifier
             .fillMaxWidth()
             .wrapContentWidth(CenterHorizontally)
             .wrapContentHeight(CenterVertically)
             .padding(horizontal = 16.dp)
-    ) {
+            .clip(RoundedCornerShape(22.dp)),
+        ) {
         Row(
             Modifier
                 .padding(start = 16.dp)
@@ -184,18 +185,18 @@ fun MeditationPath(
                 Text(
                     text = stringResource(id = title),
                     style = MaterialTheme.typography.h5,
-                    color = MaterialTheme.colors.background,
+                    color = MaterialTheme.colors.onSurface,
                     modifier = Modifier.paddingFromBaseline(top = 2.dp)
                 )
                 Text(
                     text = stringResource(id = description),
                     style = MaterialTheme.typography.body2,
-                    color = MaterialTheme.colors.background,
+                    color = MaterialTheme.colors.onSecondary,
                     maxLines = 3
                 )
                 val mainButtonColor = ButtonDefaults.buttonColors(
-                    backgroundColor = MaterialTheme.colors.background,
-                    contentColor = MaterialTheme.colors.onBackground
+                    backgroundColor = MaterialTheme.colors.onSurface,
+                    contentColor = TextWhite
                 )
                 Spacer(modifier = Modifier.height(8.dp))
                 Button(
@@ -237,12 +238,11 @@ fun MeditationPath(
     }
 }
 
-
 @Composable
 fun Navigation() {
     var selectedIndex by remember { mutableStateOf(0) }
-    val selectedColor = TextWhite
-    val unSelectedColor = Grey600
+    val selectedColor = MaterialTheme.colors.primary
+    val unSelectedColor = MaterialTheme.colors.secondaryVariant
     BottomNavigation(
         backgroundColor = MaterialTheme.colors.background,
         elevation = 10.dp
@@ -283,7 +283,7 @@ fun Navigation() {
     }
 }
 
-@Preview(showBackground = true, showSystemUi = true)
+@Preview(showBackground = true, showSystemUi = true, uiMode = UI_MODE_NIGHT_YES)
 @Composable
 fun HomePreview() {
     HomeScreen()
